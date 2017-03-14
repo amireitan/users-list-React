@@ -1,0 +1,7 @@
+*.log
+npm-debug.log
+dist
+.lock-wscript
+node_modules
+.tmp
+.env

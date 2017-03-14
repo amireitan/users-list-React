@@ -1,0 +1,60 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React - mini demo",
+  "main": "index.js",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "start": "npm-run-all clean:tmp clean:dist dev server",
+    "server": "webpack-dev-server",
+    "dev": "cross-env NODE_ENV=development --env.prod=false",
+    "pro": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
+    "build": "cross-env NODE_ENV=production webpack --env.prod=true",
+    "prebuild:js": "clean:dist",
+    "clean:dist": "rimraf dist",
+    "clean:tmp": "rimraf .tmp"
+  },
+  "author": "Amir Eitan",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "babel-runtime": "6.22.0",
+    "eventsource-polyfill": "^0.9.6",
+    "lodash": "4.17.4",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-redux": "5.0.2",
+    "uuid": "3.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "babel-core": "6.16.0",
+    "babel-loader": "6.2.7",
+    "babel-plugin-transform-class-properties": "6.22.0",
+    "babel-plugin-transform-runtime": "6.15.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.22.0",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-register": "^6.23.0",
+    "cross-env": "3.1.4",
+    "css-loader": "0.14.5",
+    "es6-promise": "^4.0.5",
+    "extract-text-webpack-plugin": "^2.0.0-beta",
+    "file-loader": "0.8.5",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.1",
+    "postcss": "^5.2.13",
+    "postcss-load-config": "^1.2.0",
+    "postcss-loader": "^1.3.0",
+    "sass-loader": "^6.0.0",
+    "source-map-support": "^0.4.11",
+    "style-loader": "0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "2.2.0",
+    "webpack-dev-server": "2.2.0",
+    "webpack-hot-middleware": "^2.17.0",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
